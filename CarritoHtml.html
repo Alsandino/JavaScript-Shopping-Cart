@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Carrito de compra</title>
+	<script src = "CarritoJS.js" ></script>
+	<link rel="stylesheet" href="estiloCarrito.css" />
+</head>
+<body>
+	<div id="cuadrado">
+	<h3>Carrito de compra</h3>
+<form name="Carrito" id="form">
+	<div>
+		<label>Nombre artículo: </label><br>
+		<input class="cajaTexto" type="text" name="nombreArt" id="nombreArt"><span id="mensajeError"></span>
+		<a name= "error1" id ="error1"></a>
+	</div>
+	<br>
+	<div>
+		<label>Precio artículo: </label><br>
+		<input type="text" name="precioArt" id="precioArt">
+		<a name= "error2" id ="error2"></a>
+	</div>
+	<br>
+	<div>
+		<label>Unidades: </label><br>
+		<input type="number" name="unidades" id="unidades" value=1 required>
+	</div>
+	<br>
+	<div>
+	<button type="button" id="añadir" onclick="añadirCarrito()">Añadir al carrito</button>
+	</div>
+	<a name= "error3" id ="error3"></a>
+	<br><br>
+	<div>
+		<label>Artículos en el carrito: </label><br>
+		<input type="text" name="artCarrito" id="artCarrito" >
+	</div>
+	<br>
+	<div>
+		<label>Precio total del carrito: </label><br>
+		<input type="text" name="precioCarrito" id="precioCarrito">
+	</div>
+	<br>
+	<div>
+		<label>Forma de pago: </label><br>
+		<select onchange="mostrarPago()" name="formaPago" id="formaPago">
+			<option value="" disabled selected>--Seleccione--</option>
+    		<option value="tarjeta">Tarjeta</option>
+   			<option value="efectivo">Efectivo</option>
+ 		</select>
+	</div>
+	<br>
+		<div id="pagoTarjeta">
+		<label>Titular tarjeta: </label><br><br>
+		<input type="text" name="titTarjeta" id="titTarjeta">
+		<label>Número tarjeta: </label><br><br>
+		<input type="number" name="numTarjeta" id="numTarjeta">
+		<label>CVV: </label><br><br>
+		<input type="number" name="cvv" id="cvv">
+	</div>
+	<div id="pagoEfectivo">
+		<label>Importe efectivo; </label><br>
+		<input type="text" name="importeEfectivo" id="importeEfectivo" value="">
+	</div>
+	<br>
+	<div>
+		<label>Acepto las condiciones de compra </label>
+		<input onclick="activarBoton()" type="checkbox" name="acepto" id="acepto">
+	</div>
+	<br>
+	<div>
+	<button onclick="resetea()" type="reset" name="restablecer" id="restablecer">Restablecer</button>
+	<button onclick="print()" type="button" name="imprimir" id="imprimir" disabled="disabled">Imprimir</button>
+	</div>
+</div>
+</form>
+</body>
+</html>

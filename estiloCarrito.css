@@ -1,0 +1,56 @@
+h3 {
+	color: black;
+	text-align: center;
+	font-family: helvetica;
+}
+
+input {
+	text-align: left;
+	font-family: helvetica;
+}
+
+label {
+	text-align: center;
+	font-family: helvetica;
+}
+
+button {
+	font-family: helvetica;
+	size: 150px;
+	background-color:#89CFF0;
+	border-width: 0.1;
+}
+
+div {
+	text-align:center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+text {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+body{
+	padding:10px;
+	background:#89CFF0;
+}
+
+#cuadrado{
+
+background: white;
+
+position: relative;
+
+float: left;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, 2%);
+
+width:400px;
+
+}
